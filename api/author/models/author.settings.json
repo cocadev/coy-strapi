@@ -1,0 +1,79 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authors",
+  "info": {
+    "name": "Authors"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "DateJoined": {
+      "type": "date"
+    },
+    "AuthorType": {
+      "type": "enumeration",
+      "enum": [
+        "Author",
+        "Blogger",
+        "Expert",
+        "Tutor"
+      ]
+    },
+    "Email": {
+      "type": "email"
+    },
+    "TwitterHandle": {
+      "type": "string"
+    },
+    "InstagramHandle": {
+      "type": "string"
+    },
+    "FacebookHandle": {
+      "type": "string"
+    },
+    "Website": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "richtext"
+    },
+    "PreviewText": {
+      "type": "text"
+    },
+    "PhotoUrl": {
+      "type": "string"
+    },
+    "Articles": {
+      "via": "Author",
+      "collection": "article"
+    },
+    "Courses": {
+      "collection": "courses",
+      "via": "Author"
+    },
+    "Tutorials": {
+      "collection": "tutorials",
+      "via": "Author"
+    },
+    "MicroLessons": {
+      "via": "Author",
+      "collection": "micro-lessons"
+    },
+    "LearningPaths": {
+      "collection": "learning-paths",
+      "via": "Author"
+    },
+    "Stories": {
+      "collection": "stories",
+      "via": "Author"
+    },
+    "Slug": {
+      "type": "string"
+    }
+  }
+}

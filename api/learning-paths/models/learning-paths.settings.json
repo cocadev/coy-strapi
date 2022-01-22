@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learning_paths",
+  "info": {
+    "name": "LearningPaths"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Slug": {
+      "type": "string"
+    },
+    "LogoUrl": {
+      "type": "string"
+    },
+    "Author": {
+      "via": "LearningPaths",
+      "model": "author"
+    },
+    "Tags": {
+      "via": "LearningPaths",
+      "collection": "tags"
+    }
+  }
+}

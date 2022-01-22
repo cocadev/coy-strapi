@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tutorials",
+  "info": {
+    "name": "Tutorials"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Slug": {
+      "type": "string"
+    },
+    "LogoUrl": {
+      "type": "string"
+    },
+    "Author": {
+      "via": "Tutorials",
+      "model": "author"
+    },
+    "Courses": {
+      "collection": "courses",
+      "via": "Tutorials"
+    },
+    "MicroLessons": {
+      "via": "Tutorial",
+      "collection": "micro-lessons"
+    },
+    "Tags": {
+      "via": "Tutorials",
+      "collection": "tags"
+    }
+  }
+}

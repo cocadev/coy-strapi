@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/micro-lessons",
+      "handler": "micro-lessons.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/micro-lessons/count",
+      "handler": "micro-lessons.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/micro-lessons/:id",
+      "handler": "micro-lessons.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/micro-lessons",
+      "handler": "micro-lessons.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/micro-lessons/:id",
+      "handler": "micro-lessons.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/micro-lessons/:id",
+      "handler": "micro-lessons.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

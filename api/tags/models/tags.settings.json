@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "name": "Tags"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Courses": {
+      "collection": "courses",
+      "via": "Tags",
+      "dominant": true
+    },
+    "Tutorials": {
+      "collection": "tutorials",
+      "via": "Tags",
+      "dominant": true
+    },
+    "MicroLessons": {
+      "via": "Tags",
+      "collection": "micro-lessons",
+      "dominant": true
+    },
+    "LearningPaths": {
+      "collection": "learning-paths",
+      "via": "Tags",
+      "dominant": true
+    },
+    "Stories": {
+      "collection": "stories",
+      "via": "Tags",
+      "dominant": true
+    },
+    "Category": {
+      "via": "Tags",
+      "model": "categories"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stories",
+  "info": {
+    "name": "Stories"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Slug": {
+      "type": "string"
+    },
+    "LogoUrl": {
+      "type": "string"
+    },
+    "Author": {
+      "via": "Stories",
+      "model": "author"
+    },
+    "Tags": {
+      "via": "Stories",
+      "collection": "tags"
+    }
+  }
+}

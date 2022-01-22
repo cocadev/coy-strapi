@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "name": "Articles",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "ArticleType": {
+      "type": "string",
+      "default": "STANDARD"
+    },
+    "Slug": {
+      "type": "string"
+    },
+    "DatePublished": {
+      "type": "date"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Creation",
+        "Editorial_Review",
+        "Denied",
+        "Published"
+      ]
+    },
+    "Content": {
+      "type": "richtext"
+    },
+    "Author": {
+      "via": "Articles",
+      "model": "author"
+    },
+    "Category": {
+      "via": "Articles",
+      "model": "categories"
+    },
+    "Media": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

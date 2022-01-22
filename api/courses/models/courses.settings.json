@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "name": "Courses"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Slug": {
+      "type": "string"
+    },
+    "LogoUrl": {
+      "type": "string"
+    },
+    "Author": {
+      "via": "Courses",
+      "model": "author"
+    },
+    "Tags": {
+      "via": "Courses",
+      "collection": "tags"
+    },
+    "Tutorials": {
+      "via": "Courses",
+      "collection": "tutorials",
+      "dominant": true
+    }
+  }
+}
