@@ -1,3 +1,3 @@
-# Strapi application 2
+# Strapi application
 
 A quick description of your strapi application
